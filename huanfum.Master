@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="huanfum.master.cs" Inherits="换肤.huanfum" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<%--  <script src="JavaScript.js"></script>--%>
+     <script>
+         function changef() {
+             var _css = document.getElementById('css');
+             if (_css.href.indexOf("huanfu.css") != -1)
+                 _css.href = _css.href.replace("huanfu.css", "otherhu.css");
+             else
+                 _css.href = _css.href.replace("otherhu.css", "huanfu.css");
+         }
+     </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>模板换肤</title>
+    <link id="css" rel="stylesheet" type="text/css" href="huanfu.css"/>
+    <img alt="" src="image/3.jpg" />
+    <h1 class="txt" >重庆工程学院</h1>
+    <input id="btnChangeSkin" type="button" value="换肤" onclick="changef()" />
+   <%-- <input id="change" type="button" value="换肤" onclick ="changefuntion();"/>--%>
+   
+    <asp:ContentPlaceHolder ID="head" runat="server"> 
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+    <img alt="" src="image/3.jpg" />
+     
+</html>

@@ -1,0 +1,2 @@
+﻿function changefuntion() {    console.log('1111');    var _css = document.getElementById('css’);            if (_css.href.indexOf("huanfu.css") != -1)        _css.href = _css.href.replace("huanfu.css", "otherhu.css");    else        _css.href = _css.href.replace("otherhu.css", "huanfu.css");}function changefuntion1() {    console.log("111111")
+}
